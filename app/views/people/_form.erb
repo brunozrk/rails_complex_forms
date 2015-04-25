@@ -1,0 +1,15 @@
+<%= simple_form_for @person, wrapper: :vertical_form do |f|%>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+
+  <%= content_tag(:div, id: 'addresses') do %>
+    <%= f.simple_fields_for :addresses do |addresses_form| %>
+      <%= render 'address_fields', f: addresses_form %>
+    <% end %>
+    <%= link_to_add_association 'add address', f, :addresses, class: 'btn btn-primary' %>
+  <% end %>
+
+  <%= f.button :submit %>
+  <%= link_to 'Voltar', people_path %>
+<% end %>

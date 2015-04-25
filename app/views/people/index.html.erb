@@ -1,0 +1,17 @@
+<table class="table">
+<caption>People <%= link_to 'new', new_person_path %></caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= link_to 'edit', edit_person_path(person) %> <%= link_to 'remove', person_path(person), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
