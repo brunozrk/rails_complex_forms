@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150426005731) do
+ActiveRecord::Schema.define(version: 20150426014057) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "number"
@@ -19,7 +19,15 @@ ActiveRecord::Schema.define(version: 20150426005731) do
     t.integer "person_id"
   end
 
+  create_table "games", force: :cascade do |t|
+    t.string "name"
+  end
+
   create_table "people", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "players", force: :cascade do |t|
     t.string "name"
   end
 
@@ -31,6 +39,12 @@ ActiveRecord::Schema.define(version: 20150426005731) do
     t.integer "quantity"
     t.integer "seller_id"
     t.integer "product_id"
+  end
+
+  create_table "scores", force: :cascade do |t|
+    t.integer "value"
+    t.integer "game_id"
+    t.integer "player_id"
   end
 
   create_table "sellers", force: :cascade do |t|
