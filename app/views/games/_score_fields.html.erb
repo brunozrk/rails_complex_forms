@@ -1,0 +1,7 @@
+<%= content_tag(:div, class: "col-md-12 nested-fields") do %>
+  <%= f.input :value, wrapper_html: { class: 'col-xs-3' }  %>
+
+  <%= f.input :player_id, collection: Player.all, wrapper_html: { class: 'col-xs-3' } %>
+
+  <%= link_to_remove_association '', f, class: 'glyphicon glyphicon-remove' %>
+<% end %>

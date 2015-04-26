@@ -1,0 +1,15 @@
+<%= simple_form_for @game, wrapper: :vertical_form do |f|%>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+
+  <%= content_tag(:div, id: 'scores') do %>
+    <%= f.simple_fields_for :scores do |scores_form| %>
+      <%= render 'score_fields', f: scores_form %>
+    <% end %>
+    <%= link_to_add_association 'add score', f, :scores, class: 'btn btn-primary' %>
+  <% end %>
+
+  <%= f.button :submit %>
+  <%= link_to 'Voltar', games_path %>
+<% end %>
