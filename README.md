@@ -13,4 +13,4 @@ Simple app with complex forms examples described in my blog http://brunozrk.gith
   * address.rb
   * person.rb
 * View
-  * People 
+  * people 
