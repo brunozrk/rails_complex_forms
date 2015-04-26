@@ -1,0 +1,10 @@
+<%= simple_form_for @sale, wrapper: :vertical_form do |f|%>
+  <%= f.error_notification %>
+
+  <%= f.input :seller_id, collection: Seller.all %>
+  <%= f.input :product_id, collection: Product.all %>
+  <%= f.input :quantity %>
+
+  <%= f.button :submit %>
+  <%= link_to 'Voltar', sales_path %>
+<% end %>

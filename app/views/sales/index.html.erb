@@ -1,0 +1,23 @@
+<table class="table">
+<caption>Sales <%= link_to 'new', new_sale_path %></caption>
+  <thead>
+    <tr>
+      <th>Seller</th>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.seller.name %></td>
+        <td><%= sale.product.name %></td>
+        <td><%= sale.quantity%></td>
+        <td>
+          <%= link_to 'edit', edit_sale_path(sale) %>
+          <%= link_to 'remove', sale_path(sale), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
