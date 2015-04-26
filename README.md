@@ -3,9 +3,9 @@ Rails Complex Forms
 
 Simple app with complex forms examples described in my blog http://brunozrk.github.io/
 
-#### Rails form one to many relation
+#### Rails form one to many relationship
 
-[Online example](https://rails-complex-forms.herokuapp.com/people/new) | [Post](http://brunozrk.github.io/complex-form/2015/04/25/rails-form-one-to-many-relation.html)
+[Online example](https://rails-complex-forms.herokuapp.com/people/new) | [Post](http://brunozrk.github.io/complex-form/2015/04/25/rails-form-one-to-many-relationship.html)
 
 * Controller
   * people_controller.rb
@@ -15,7 +15,7 @@ Simple app with complex forms examples described in my blog http://brunozrk.gith
 * View
   * people 
 
-#### Rails form many to many relation [1]
+#### Rails form many to many relationship [1]
 
 [Online example](https://rails-complex-forms.herokuapp.com/sales) | 
 
@@ -28,7 +28,7 @@ Simple app with complex forms examples described in my blog http://brunozrk.gith
 * View
   * sales
 
-#### Rails form many to many relation [2]
+#### Rails form many to many relationship [2]
 
 [Online example](https://rails-complex-forms.herokuapp.com/games) | 
 
